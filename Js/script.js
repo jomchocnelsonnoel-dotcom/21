@@ -70,7 +70,7 @@ function getURLParam(name) {
 function showDedicationText() { //seguidores
   let text = getURLParam('text');
   if (!text) {
-    text = `"Elma", Para el amor de mi vida. Tu sonrisa, tu voz, tu forma de ser… todo en ti me hace sentir en casa.\n\nGracias por acompañarme en cada paso, por entenderme incluso en silencio, y por llenar mis días de amor.\n\nTe amo más de lo que las palabras pueden expresar.`;  } else {
+    text = `"Andri", Tu sonrisa, tu voz, tu forma de ser… todo en ti me hace sentir en casa.\n\nConocerte fue encontrar mi lugar en el mundo\n\nTe quiero más de lo que las palabras pueden expresar.`;  } else {
     text = decodeURIComponent(text).replace(/\\n/g, '\n');
   }
   const container = document.getElementById('dedication-text');
@@ -101,7 +101,7 @@ function showSignature() {
     dedication.appendChild(signature);
   }
   let firma = getURLParam('firma');
-  signature.textContent = firma ? decodeURIComponent(firma) : "!!Con amor, Noe¡¡";
+  signature.textContent = firma ? decodeURIComponent(firma) : "!!Con amor, Nelson¡¡";
   signature.classList.add('visible');
 }
 
@@ -219,4 +219,14 @@ function playBackgroundMusic() {
 // Intentar reproducir la música lo antes posible (al cargar la página)
 window.addEventListener('DOMContentLoaded', () => {
   playBackgroundMusic();
+});
+
+window.addEventListener('load', () => {
+  const audio = document.getElementById('bg-music');
+  if (audio) {
+    setTimeout(() => {
+      audio.muted = false;
+      audio.play().catch(() => {});
+    }, 2000); // 2 segundos después de cargar
+  }
 });
