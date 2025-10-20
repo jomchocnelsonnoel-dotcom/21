@@ -192,7 +192,7 @@ function playBackgroundMusic() {
     btn.style.border = 'none';
     btn.style.borderRadius = '24px';
     btn.style.padding = '10px 18px';
-    btn.style.fontSize = '1.2em';
+    btn.style.fontSize = '1.8em';
     btn.style.cursor = 'pointer';
     document.body.appendChild(btn);
   }
