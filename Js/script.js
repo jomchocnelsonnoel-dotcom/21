@@ -70,7 +70,7 @@ function getURLParam(name) {
 function showDedicationText() { //seguidores
   let text = getURLParam('text');
   if (!text) {
-    text = `"Andri", Tu sonrisa, tu voz, tu forma de ser… todo en ti me hace sentir en casa.\n\nConocerte fue encontrar mi lugar en el mundo.\n\nTe quiero más de lo que las palabras pueden expresar.`;  } else {
+    text = `"MARI", un susurro de cariño que guardo en el corazón, un recordatorio de que te quiero más de lo que las palabras pueden decir, y la promesa de estar junto a ti en cada paso. Que cada gesto mío te haga sentir lo especial que eres, hoy y siempre..`;  } else {
     text = decodeURIComponent(text).replace(/\\n/g, '\n');
   }
   const container = document.getElementById('dedication-text');
