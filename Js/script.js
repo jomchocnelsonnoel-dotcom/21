@@ -70,7 +70,7 @@ function getURLParam(name) {
 function showDedicationText() { //seguidores
   let text = getURLParam('text');
   if (!text) {
-    text = `"MARI", un susurro de cariño que guardo en el corazón, un recordatorio de que te quiero más de lo que las palabras pueden decir, y la promesa de estar junto a ti en cada paso. Que cada gesto mío te haga sentir lo especial que eres, hoy y siempre..`;  } else {
+    text = `"MARI, un susurro de cariño que guardo en el corazón, un recordatorio de que te quiero más de lo que las palabras pueden decir, y la promesa de estar junto a ti en cada paso. Que cada gesto mío te haga sentir lo especial que eres, hoy y siempre..`;  } else {
     text = decodeURIComponent(text).replace(/\\n/g, '\n');
   }
   const container = document.getElementById('dedication-text');
@@ -192,7 +192,7 @@ function playBackgroundMusic() {
     btn.style.border = 'none';
     btn.style.borderRadius = '24px';
     btn.style.padding = '10px 18px';
-    btn.style.fontSize = '1.1em';
+    btn.style.fontSize = '0.9em';
     btn.style.cursor = 'pointer';
     document.body.appendChild(btn);
   }
@@ -228,6 +228,6 @@ window.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       audio.muted = false;
       audio.play().catch(() => {});
-    }, 2000);
+    }, 20);
   }
 });
