@@ -70,7 +70,7 @@ function getURLParam(name) {
 function showDedicationText() { //seguidores
   let text = getURLParam('text');
   if (!text) {
-    text = `"Andri", Tu sonrisa, tu voz, tu forma de ser… todo en ti me hace sentir en casa.\n\nConocerte fue encontrar mi lugar en el mundo\n\nTe quiero más de lo que las palabras pueden expresar.`;  } else {
+    text = `"Andri", Tu sonrisa, tu voz, tu forma de ser… todo en ti me hace sentir en casa.\n\nConocerte fue encontrar mi lugar en el mundo.\n\nTe quiero más de lo que las palabras pueden expresar.`;  } else {
     text = decodeURIComponent(text).replace(/\\n/g, '\n');
   }
   const container = document.getElementById('dedication-text');
@@ -221,12 +221,13 @@ window.addEventListener('DOMContentLoaded', () => {
   playBackgroundMusic();
 });
 
-window.addEventListener('load', () => {
+window.addEventListener('DOMContentLoaded', () => {
   const audio = document.getElementById('bg-music');
   if (audio) {
+    audio.play().catch(() => {});
     setTimeout(() => {
       audio.muted = false;
       audio.play().catch(() => {});
-    }, 2000); // 2 segundos después de cargar
+    }, 2000);
   }
 });
